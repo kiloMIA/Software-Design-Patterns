@@ -6,4 +6,4 @@ class paymentSelection:
         self._paymentMethod = paymentMethod
     
     def deposit(self, money, periodOfTime):
-        return self._paymentMethod(self,money,periodOfTime)
+        return self._paymentMethod.deposit(self,money,periodOfTime)

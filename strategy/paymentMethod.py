@@ -1,19 +1,19 @@
 from abc import ABC, abstractmethod
 class PaymentMethod(ABC):
-    def deposit(self):
+    def deposit(self,money,periodOfTime):
         pass
 
-class Kaspi():
+class Kaspi(PaymentMethod):
     def deposit(self,money,periodOfTime):
         InterestRate = 2,5
         return money * (periodOfTime/365) * InterestRate
     
-class Halyk():
+class Halyk(PaymentMethod):
     def deposit(self,money,periodOfTime):
         InterestRate = 1,5
         return money * (periodOfTime/365) * InterestRate
 
-class Jusan():
+class Jusan(PaymentMethod):
     def deposit(self,money,periodOfTime):
         InterestRate = 3
         return money * (periodOfTime/365) * InterestRate
