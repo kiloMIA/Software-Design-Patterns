@@ -6,17 +6,20 @@ class PaymentMethod(ABC):
 class Kaspi(PaymentMethod):
     def deposit(self,money,periodOfTime):
         InterestRate = 2,5
-        return money * (periodOfTime/365) * InterestRate
+        gain = money * periodOfTime* InterestRate
+        return gain
     
 class Halyk(PaymentMethod):
     def deposit(self,money,periodOfTime):
         InterestRate = 1,5
-        return money * (periodOfTime/365) * InterestRate
+        gain = money * periodOfTime* InterestRate
+        return gain
 
 class Jusan(PaymentMethod):
     def deposit(self,money,periodOfTime):
         InterestRate = 3
-        return money * (periodOfTime/365) * InterestRate
+        gain = money * periodOfTime* InterestRate
+        return gain
         
        
        
