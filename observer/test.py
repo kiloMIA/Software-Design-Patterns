@@ -8,3 +8,4 @@ publisher.register(subscriber1)
 publisher.register(subscriber2)
 publisher.dispatch('wtf')
 
+
